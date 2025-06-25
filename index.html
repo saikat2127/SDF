@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home | Social Development Forum</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+<header>
+  <div class="header-left">
+    <img src="images/logo.png" alt="SDF Logo" class="logo">
+    <span class="org-name">Social Development Forum</span>
+    <button class="menu-toggle" onclick="toggleSidebar()">
+      <i class="fas fa-ellipsis-v"></i>
+    </button>
+  </div>
+  <nav class="navbar">
+    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+    <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+    <a href="focus.html"><i class="fas fa-lightbulb"></i> What We Do</a>
+    <a href="donate.html"><i class="fas fa-hand-holding-heart"></i> Donate</a>
+    <a href="membership.html"><i class="fas fa-user-plus"></i> Membership</a>
+    <a href="donor.html"><i class="fas fa-heartbeat"></i> Be a Donor</a>
+    <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+  </nav>
+</header>
+
+  <section class="hero social-work-hero">
+  <h2><strong>OUR SOCIAL WORK</strong></h2>
+  <p><b>Helping the poor, the sick, children, old people, and the injured</b></p>
+
+  <img src="images/social.png" alt="Social Work Activities" class="hero-img" />
+
+  <p class="hero-description">
+    ছবিটিতে সমাজসেবার বিভিন্ন দিক ফুটে উঠেছে।
+    এটি দেখায় কীভাবে মানুষ দরিদ্র, অসুস্থ, শিশু,
+    বৃদ্ধ এবং আহত ব্যক্তিদের সহায়তা করছে। প্রতিটি
+    চিত্র মানবিকতার এক উজ্জ্বল উদাহরণ হিসেবে
+    উপস্থাপন করা হয়েছে, যেখানে সহমর্মিতা ও 
+    সহানুভূতির মাধ্যমে সমাজের সেবামূলক কাজের গুরুত্ব প্রকাশিত।
+ </p>
+
+  <canvas id="socialWorkChart" width="700" height="350"></canvas>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  const ctxSocialWork = document.getElementById('socialWorkChart').getContext('2d');
+  const socialWorkChart = new Chart(ctxSocialWork, {
+    type: 'line',
+    data: {
+      labels: [
+        2010, 2012, 2014, 2016, 2018, 2020, 2022, 2024
+      ],
+      datasets: [{
+        label: 'People Helped (in millions)',
+        data: [0.5, 0.8, 1.2, 1.7, 2.3, 2.9, 3.6, 4.0],
+        fill: false,
+        borderColor: 'rgba(54, 162, 235, 0.8)',  // Blue
+        backgroundColor: 'rgba(54, 162, 235, 0.5)',
+        tension: 0.3,
+        pointRadius: 5,
+        pointHoverRadius: 7,
+        borderWidth: 3
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          display: true,
+          position: 'top',
+          labels: { font: { size: 14 } }
+        },
+        title: {
+          display: true,
+          text: 'Social Work Impact Over Years (2010-2024)',
+          font: { size: 18, weight: 'bold' }
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          title: {
+            display: true,
+            text: 'People Helped (millions)'
+          }
+        },
+        x: {
+          title: {
+            display: true,
+            text: 'Year'
+          }
+        }
+      }
+    }
+  });
+</script>
+
+<section class="hero">
+  <h2><strong>EMPOWERING LIVES ACROSS BANGLADESH</strong></h2>
+  <p><b>Helping the poor, Supporting education, Providing disaster relief nationwide</b></p>
+  
+  <img src="images/flood.png" alt="Flood Relief Efforts" class="hero-img" />
+  
+  <p class="hero-description">
+    বাংলাদেশে প্রতি বছর বন্যা একটি সাধারণ প্রাকৃতিক দুর্যোগ,
+    যা দেশের নিম্নভূমি ও নদীপ্রবাহের কারণে ঘটে। বর্ষাকালে 
+    অতিবৃষ্টি এবং পার্শ্ববর্তী দেশ থেকে আসা নদীর অতিরিক্ত 
+    পানি দেশের বেশিরভাগ অঞ্চলকে প্লাবিত করে। এই বন্যা 
+    ফসলের ক্ষতি, গবাদি পশু ও সম্পদের ধ্বংস এবং লক্ষ 
+    লক্ষ মানুষের বাস্তুচ্যুতির কারণ হয়ে দাঁড়ায়। তবে, বন্যার
+    ফলে নদীর তলদেশে পলিমাটি জমে মাটির উর্বরতা বৃদ্ধি 
+    পায়, যা কৃষিতে একটি ইতিবাচক প্রভাব ফেলে। তবুও,
+    বন্যার ক্ষয়ক্ষতি এড়াতে যথাযথ পরিকল্পনা এবং অবকাঠামো উন্নয়ন অত্যন্ত জরুরি।
+  </p>
+  
+  <canvas id="floodChart" width="700" height="350"></canvas>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  const ctx = document.getElementById('floodChart').getContext('2d');
+  const floodChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: [
+        2010, 2011, 2012, 2013, 2014, 2015,
+        2016, 2017, 2018, 2019, 2020, 2021,
+        2022, 2023, 2024
+      ],
+      datasets: [{
+        label: 'Flood Affected People (in millions)',
+        data: [
+          2.5, 3.1, 1.8, 4.0, 2.2, 3.5,
+          3.0, 3.8, 2.9, 3.2, 4.5, 5.0,
+          3.6, 2.8, 3.9
+        ],
+        fill: false,
+        borderColor: 'rgba(0, 123, 255, 0.8)',
+        backgroundColor: 'rgba(0, 123, 255, 0.5)',
+        tension: 0.3,
+        pointRadius: 5,
+        pointHoverRadius: 7,
+        borderWidth: 3
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          display: true,
+          position: 'top',
+          labels: { font: { size: 14 } }
+        },
+        title: {
+          display: true,
+          text: 'Flood History in Bangladesh (2010-2024)',
+          font: { size: 18, weight: 'bold' }
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          title: {
+            display: true,
+            text: 'Affected People (millions)'
+          }
+        },
+        x: {
+          title: {
+            display: true,
+            text: 'Year'
+          }
+        }
+      }
+    }
+  });
+</script>
+
+<section class="hero cyclone-hero">
+  <h2><strong>STANDING STRONG AGAINST CYCLONES</strong></h2>
+  <p><b>Disaster preparedness, Emergency aid, Community resilience</b></p>
+  
+  <img src="images/cyclone.jpg" alt="Cyclone Relief Efforts" class="hero-img" />
+  
+  <p class="hero-description">
+বাংলাদেশে প্রতি বছর ঘূর্ণিঝড় একটি সাধারণ প্রাকৃতিক দুর্যোগ,
+যা বঙ্গোপসাগর থেকে উৎপন্ন হয়। বিশেষ করে এপ্রিল-মে এবং
+অক্টোবর-নভেম্বর মাসে ঘূর্ণিঝড়ের প্রবণতা বেশি থাকে। এই
+ঘূর্ণিঝড়গুলি তীব্র বায়ুপ্রবাহ, ভারী বৃষ্টি এবং জলোচ্ছ্বাসের মাধ্যমে
+উপকূলীয় অঞ্চলগুলোতে ব্যাপক ক্ষতি সাধন করে। ফসল, ঘরবাড়ি,
+এবং সম্পদের ধ্বংস ছাড়াও প্রাণহানির ঘটনাও ঘটে। তবে, আধুনিক 
+আবহাওয়া পূর্বাভাস ব্যবস্থা এবং দুর্যোগ ব্যবস্থাপনা কার্যক্রমের মাধ্যমে
+ক্ষয়ক্ষতি কিছুটা নিয়ন্ত্রণ করা সম্ভব হয়েছে।
+  </p>
+  
+  <canvas id="cycloneChart" width="700" height="350"></canvas>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  const ctxCyclone = document.getElementById('cycloneChart').getContext('2d');
+  const cycloneChart = new Chart(ctxCyclone, {
+    type: 'line',
+    data: {
+      labels: [
+        2010, 2011, 2012, 2013, 2014, 2015,
+        2016, 2017, 2018, 2019, 2020, 2021,
+        2022, 2023, 2024
+      ],
+      datasets: [{
+        label: 'Cyclone Affected People (in millions)',
+        data: [
+          1.8, 2.2, 1.5, 2.8, 2.0, 2.5,
+          2.1, 2.7, 2.3, 2.9, 3.1, 3.4,
+          2.8, 2.5, 3.0
+        ],
+        fill: false,
+        borderColor: 'rgba(255, 99, 71, 0.8)',  // Tomato Red
+        backgroundColor: 'rgba(255, 99, 71, 0.5)',
+        tension: 0.3,
+        pointRadius: 5,
+        pointHoverRadius: 7,
+        borderWidth: 3
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          display: true,
+          position: 'top',
+          labels: { font: { size: 14 } }
+        },
+        title: {
+          display: true,
+          text: 'Cyclone History in Bangladesh (2010-2024)',
+          font: { size: 18, weight: 'bold' }
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          title: {
+            display: true,
+            text: 'Affected People (millions)'
+          }
+        },
+        x: {
+          title: {
+            display: true,
+            text: 'Year'
+          }
+        }
+      }
+    }
+  });
+</script>
+
+
+  <footer>
+    <p>&copy; Social Development Forum. All rights reserved.
+     <br><b>Since 2025</b></br>
+    </p>
+  </footer>
+
+  <script>
+  function toggleSidebar() {
+    const navbar = document.querySelector('.navbar');
+    navbar.classList.toggle('show');
+  }
+</script>
+
+</body>
+</html>

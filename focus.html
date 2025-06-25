@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>What We Do | Social Development Forum</title>
+  <link rel="stylesheet" href="css/focus.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+ <header>
+  <div class="header-left">
+    <img src="images/logo.png" alt="SDF Logo" class="logo">
+    <span class="org-name">Social Development Forum</span>
+    <button class="menu-toggle" onclick="toggleSidebar()">
+      <i class="fas fa-ellipsis-v"></i>
+    </button>
+  </div>
+  <nav class="navbar">
+    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+    <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+    <a href="focus.html"><i class="fas fa-lightbulb"></i> What We Do</a>
+    <a href="donate.html"><i class="fas fa-hand-holding-heart"></i> Donate</a>
+    <a href="membership.html"><i class="fas fa-user-plus"></i> Membership</a>
+    <a href="donor.html"><i class="fas fa-heartbeat"></i> Be a Donor</a>
+    <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+  </nav>
+</header>
+
+  <section id="focus-areas" class="focus-section">
+    <h2>আমাদের প্রধান কার্যক্রম</h2>
+
+    <div class="focus-item">
+      <h3>দরিদ্র পরিবারের জন্য জীবিকার সহায়তা ও আশ্রয়</h3>
+      <p>দরিদ্র পরিবারগুলোকে জরুরি খাদ্য, বস্ত্র, ও নিরাপদ আশ্রয় প্রদান করে আমরা তাদের জীবনযাত্রার মান উন্নয়নে কাজ করি।</p>
+      <div class="slider" data-slider="slider1">
+        <div class="slides">
+          <img src="images/focus1.jpg" alt="Assisting Poor Families 1" />
+          <img src="images/focus2.jpg" alt="Assisting Poor Families 2" />
+          <img src="images/focus3.jpeg" alt="Assisting Poor Families 3" />
+        </div>
+      </div>
+    </div>
+
+    <div class="focus-item">
+      <h3>শিক্ষা সহায়তা ও বৃত্তি প্রদান</h3>
+      <p>অর্থনৈতিকভাবে পিছিয়ে পড়া ছাত্রছাত্রীদের জন্য বৃত্তি এবং শিক্ষা সামগ্রী সরবরাহ করে তাদের শিক্ষাগত উন্নয়নে সহায়তা করি।</p>
+      <div class="slider" data-slider="slider2">
+        <div class="slides">
+          <img src="images/focus4.jpg" alt="Scholarship 1" />
+          <img src="images/focus5.jpg" alt="Scholarship 2" />
+          <img src="images/focus6.jpg" alt="Scholarship 3" />
+        </div>
+      </div>
+    </div>
+
+    <div class="focus-item">
+      <h3>মেয়েদের শিক্ষায় উৎসাহ ও আর্থিক সহায়তা</h3>
+      <p>নারী শিক্ষার গুরুত্ব তুলে ধরে, মেয়েদের শিক্ষা চালিয়ে যাওয়ার জন্য উৎসাহ প্রদান এবং আর্থিক সহায়তা দিই।</p>
+      <div class="slider" data-slider="slider3">
+        <div class="slides">
+          <img src="images/focus7.jpg" alt="Girls Education 1" />
+          <img src="images/focus8.jpg" alt="Girls Education 2" />
+          <img src="images/focus9.png" alt="Girls Education 3" />
+        </div>
+      </div>
+    </div>
+
+    <div class="focus-item">
+      <h3>বন্যা, ঘূর্ণিঝড় ও দুর্যোগে ত্রাণ কার্যক্রম</h3>
+      <p>প্রাকৃতিক দুর্যোগের সময় ক্ষতিগ্রস্তদের ত্রাণ সহায়তা এবং পুনর্বাসনে সক্রিয়ভাবে কাজ করি।</p>
+      <div class="slider" data-slider="slider4">
+        <div class="slides">
+          <img src="images/focus10.jpg" alt="Disaster Relief 1" />
+          <img src="images/focus11.jpg" alt="Disaster Relief 2" />
+          <img src="images/focus12.jpg" alt="Disaster Relief 3" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Social Development Forum</p>
+  </footer>
+
+<script>
+const sliders = {};
+
+function changeSlide(sliderId, direction = 1) {
+  const slider = document.querySelector(`.slider[data-slider="${sliderId}"] .slides`);
+  if (!slider) return;
+
+  const slidesCount = slider.children.length;
+
+  if (!(sliderId in sliders)) sliders[sliderId] = 0;
+
+  sliders[sliderId] += direction;
+
+  if (sliders[sliderId] < 0) sliders[sliderId] = slidesCount - 1;
+  if (sliders[sliderId] >= slidesCount) sliders[sliderId] = 0;
+
+  const translateX = -sliders[sliderId] * 100;
+  slider.style.transform = `translateX(${translateX}%)`;
+}
+
+function autoSlideAll() {
+  document.querySelectorAll('.slider').forEach(sliderElem => {
+    const sliderId = sliderElem.getAttribute('data-slider');
+    changeSlide(sliderId, 1);
+  });
+}
+
+// Start auto sliding every 4 seconds
+setInterval(autoSlideAll, 4000);
+</script>
+
+<script>
+const menuToggle = document.getElementById('menu-toggle');
+const navbar = document.querySelector('.navbar');
+
+menuToggle.addEventListener('click', () => {
+  navbar.classList.toggle('active');
+});
+
+menuToggle.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter' || e.key === ' ') {
+    navbar.classList.toggle('active');
+  }
+});
+</script>
+
+  <script>
+  function toggleSidebar() {
+    const navbar = document.querySelector('.navbar');
+    navbar.classList.toggle('show');
+  }
+</script>
+
+</body>
+</html>

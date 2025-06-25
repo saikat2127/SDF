@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Be a Donor | Social Development Forum</title>
+  <link rel="stylesheet" href="css/donor.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+<header>
+  <div class="header-left">
+    <img src="images/logo.png" alt="SDF Logo" class="logo">
+    <span class="org-name">Social Development Forum</span>
+    <button class="menu-toggle" onclick="toggleSidebar()">
+      <i class="fas fa-ellipsis-v"></i>
+    </button>
+  </div>
+  <nav class="navbar">
+    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+    <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+    <a href="focus.html"><i class="fas fa-lightbulb"></i> What We Do</a>
+    <a href="donate.html"><i class="fas fa-hand-holding-heart"></i> Donate</a>
+    <a href="membership.html"><i class="fas fa-user-plus"></i> Membership</a>
+    <a href="donor.html"><i class="fas fa-heartbeat"></i> Be a Donor</a>
+    <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+  </nav>
+</header>
+
+  <section class="donation-importance">
+  <h2>Importance of Blood & Organ Donation</h2>
+  <p>
+    Blood and organ donation is one of the most selfless acts a human being can do. Every drop of blood donated can save a life, and every organ donated can give someone a second chance at life.
+  </p>
+  <p>
+    In Bangladesh, thousands of patients suffer daily due to lack of available blood and organ donors. Whether it's a child undergoing surgery, a mother facing childbirth complications, or a patient with kidney or liver failure — your donation can make the difference between life and death.
+  </p>
+  <p>
+    By becoming a donor, you become a real-life hero, giving hope to those in critical need. It not only strengthens community bonds but also promotes a culture of empathy, humanity, and responsibility.
+  </p>
+  <div class="donation-call">
+    <strong>Join us in this noble mission — be a blood or organ donor today and help save lives.</strong>
+  </div>
+</section>
+
+
+<section class="blood-donor-section">
+  <h2>Become a Blood Donor</h2>
+  <p>
+    Blood donation is a gift of life. By donating just a small amount of blood, you can save lives during emergencies, surgeries, and for patients with chronic conditions. Join our community of life-saving heroes.
+  </p>
+
+  <form class="blood-donor-form">
+    <input type="text" placeholder="Full Name" required />
+    <input type="tel" placeholder="Phone Number" required />
+    <input type="email" placeholder="Email Address" required />
+    <input type="text" placeholder="Blood Group (e.g., A+, O-)" required />
+    <input type="text" placeholder="District / Location" required />
+    <textarea placeholder="Any health conditions or comments (optional)"></textarea>
+    <button type="submit">Register as Blood Donor</button>
+  </form>
+
+  <div class="blood-note">
+    <strong>Note:</strong> You must be 18+ years old, in good health, and free of major illnesses to donate blood. All information will be kept confidential.
+  </div>
+</section>
+
+
+  <footer>
+    <p>&copy; 2025 Social Development Forum</p>
+  </footer>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+    import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "YOUR_API_KEY",
+      authDomain: "YOUR_PROJECT.firebaseapp.com",
+      projectId: "YOUR_PROJECT_ID",
+      storageBucket: "YOUR_PROJECT.appspot.com",
+      messagingSenderId: "YOUR_SENDER_ID",
+      appId: "YOUR_APP_ID"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    const form = document.querySelector("form");
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const name = form.querySelector('input[placeholder="Full Name"]').value;
+      const phone = form.querySelector('input[placeholder="Phone Number"]').value;
+      const type = form.querySelector("select").value;
+
+      try {
+        await addDoc(collection(db, "donors"), { name, phone, type });
+        alert("Thank you for registering!");
+        form.reset();
+      } catch (err) {
+        alert("Error: " + err.message);
+      }
+    });
+
+    // Mobile navbar toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const navbar = document.querySelector('.navbar');
+    menuToggle.addEventListener('click', () => navbar.classList.toggle('active'));
+    menuToggle.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        navbar.classList.toggle('active');
+        e.preventDefault();
+      }
+    });
+  </script>
+
+    <script>
+  function toggleSidebar() {
+    const navbar = document.querySelector('.navbar');
+    navbar.classList.toggle('show');
+  }
+</script>
+
+</body>
+</html>

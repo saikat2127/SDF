@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us | Social Development Forum</title>
+  <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+ <header>
+  <div class="header-left">
+    <img src="images/logo.png" alt="SDF Logo" class="logo">
+    <span class="org-name">Social Development Forum</span>
+    <button class="menu-toggle" onclick="toggleSidebar()">
+      <i class="fas fa-ellipsis-v"></i>
+    </button>
+  </div>
+  <nav class="navbar">
+    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+    <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+    <a href="focus.html"><i class="fas fa-lightbulb"></i> What We Do</a>
+    <a href="donate.html"><i class="fas fa-hand-holding-heart"></i> Donate</a>
+    <a href="membership.html"><i class="fas fa-user-plus"></i> Membership</a>
+    <a href="donor.html"><i class="fas fa-heartbeat"></i> Be a Donor</a>
+    <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+  </nav>
+</header>
+
+ <main class="who-we-are">
+  <h2>Who We Are?</h2>
+  <div class="description-with-image">
+    <img src="images/about.png" alt="Student Community of Bangladesh" />
+    <p>
+      The Social Development Forum is primarily driven by the passionate student community of Bangladesh. Together, we strive to uplift the underprivileged, support education, empower girls, and aid victims of natural disasters nationwide!!!
+    </p>
+  </div>
+
+<section id="about-description" style="padding: 30px; font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: auto; background: #f0f4f8; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+  <h2 style="color: #1e2a78; margin-bottom: 15px;">আমাদের কাজ সম্পর্কে</h2>
+  <p style="font-size: 18px; line-height: 1.7; color: #333;">
+    সামাজিক উন্নয়ন ফোরাম (SDF) হলো একটি স্বেচ্ছাসেবী ও সামাজিক কল্যাণমূলক প্রতিষ্ঠান, যা বাংলাদেশে দরিদ্র ও পিছিয়ে পড়া জনগোষ্ঠীর ক্ষমতায়নের জন্য কাজ করে। আমরা শিক্ষার উন্নতি, স্বাস্থ্যসেবা, দুর্যোগ মোকাবেলা, নারী ক্ষমতায়ন এবং যুব উন্নয়নের মাধ্যমে সমাজে ইতিবাচক পরিবর্তন আনার লক্ষ্যে কাজ করি। একসাথে, আমরা সবার জন্য উজ্জ্বল ও অন্তর্ভুক্তিমূলক ভবিষ্যত গড়ে তোলার চেষ্টা করি।
+  </p>
+</section>
+</main>
+
+
+<section id="sdf-rules" style="padding: 30px; font-family: 'Segoe UI', sans-serif;">
+  <div style="text-align: right; margin-bottom: 20px;">
+    <button onclick="toggleLanguage('en')" style="padding: 8px 16px; margin-right: 10px;">🇬🇧 English</button>
+    <button onclick="toggleLanguage('bn')" style="padding: 8px 16px;">🇧🇩 বাংলা</button>
+  </div>
+
+  <!-- English Rules -->
+  <div id="rules-en">
+    <h2>Rules of the Social Development Forum (SDF)</h2>
+    <ul>
+      <li>Members must be at least 16 years old and agree with SDF’s mission.</li>
+      <li>All members must maintain ethical behavior and discipline.</li>
+      <li>No member may use SDF’s name for personal or political purposes.</li>
+      <li>Members must actively participate in welfare events and meetings.</li>
+      <li>Any misuse of funds or assets will result in strict action.</li>
+      <li>Decisions must be made democratically with proper meetings.</li>
+      <li>Membership may be suspended or canceled for violations.</li>
+      <li>All donations must be documented and used transparently.</li>
+      <li>Members must respect each other and work as a team.</li>
+      <li>Any rule change must be approved by majority vote.</li>
+    </ul>
+  </div>
+
+  <!-- Bangla Rules -->
+  <div id="rules-bn" style="display: none;">
+    <h2>সামাজিক উন্নয়ন ফোরাম (SDF) এর নিয়মাবলি</h2>
+    <ul>
+      <li>সদস্যদের ন্যূনতম বয়স ১৬ বছর হতে হবে এবং SDF-এর উদ্দেশ্যের সাথে একমত হতে হবে।</li>
+      <li>সকল সদস্যকে শৃঙ্খলা ও নৈতিক আচরণ বজায় রাখতে হবে।</li>
+      <li>SDF-এর নাম কোনো ব্যক্তিগত বা রাজনৈতিক কাজে ব্যবহার করা যাবে না।</li>
+      <li>সদস্যদের তহবিল বা সম্পদের কোনো অপব্যবহার কঠোরভাবে দণ্ডনীয়।</li>
+      <li>সকল সিদ্ধান্ত গণতান্ত্রিকভাবে বৈঠকের মাধ্যমে নিতে হবে।</li>
+      <li>উপস্থিতি ও কার্যক্রমে সক্রিয় অংশগ্রহণ প্রত্যাশিত।</li>
+      <li>নিয়ম ভঙ্গের জন্য সদস্যপদ বাতিল বা স্থগিত করা হতে পারে।</li>
+      <li>অনুদানের সঠিক হিসাব রাখা এবং স্বচ্ছভাবে ব্যবহার করা বাধ্যতামূলক।</li>
+      <li>সদস্যদের মধ্যে পারস্পরিক সম্মান ও সহযোগিতা বজায় রাখতে হবে।</li>
+      <li>নিয়ম পরিবর্তন করতে হলে সংখ্যাগরিষ্ঠ সদস্যের সম্মতি প্রয়োজন।</li>
+    </ul>
+  </div>
+</section>
+
+<main class="who-we-are">
+  <section class="leadership-messages">
+    <article class="message chairman">
+      <img src="images/chairma.jpg" alt="Chairman" />
+      <div>
+        <h3>Message from the Chairman</h3>
+        <p>
+          "Our vision is to harness the energy and creativity of students to build a stronger, more compassionate Bangladesh. We believe in empowering every individual to create meaningful change."
+        -(***)
+        </p>
+      </div>
+    </article>
+
+    <article class="message president">
+      <img src="images/presiden.jpg" alt="President" />
+      <div>
+        <h3>Message from the President</h3>
+        <p>
+          "At SDF, community and dedication drive our mission. Together, we can overcome challenges and build a brighter future for all Bangladeshis."
+       -(***)
+        </p>
+      </div>
+    </article>
+  </section>
+</main>
+
+<section class="advisor-section">
+  <h3>Advisors of Social Development Forum</h3>
+  <div class="advisor-cards">
+    <div class="advisor-card">
+      <div class="advisor-header">
+        <img src="images/advisors/anwar.jpg" alt="Mr. Anwar Hossain" />
+        <h4>Mr. Anwar Hossain</h4>
+        <p>Senior Advisor<br>Former Govt. Officer</p>
+      </div>
+      <div class="advisor-bio">
+        <p>Mr. Anwar has served in various administrative positions for over 30 years. He provides strategic guidance and oversees ethical practices in all SDF operations.</p>
+      </div>
+    </div>
+
+    <div class="advisor-card">
+      <div class="advisor-header">
+        <img src="images/advisors/farzana.jpg" alt="Dr. Farzana Islam" />
+        <h4>Dr. Farzana Islam</h4>
+        <p>Education Advisor<br>Professor at DU</p>
+      </div>
+      <div class="advisor-bio">
+        <p>Dr. Farzana is dedicated to improving education accessibility. She designs learning programs and mentors youth volunteers across the country.</p>
+      </div>
+    </div>
+    <div class="advisor-card">
+      <div class="advisor-header">
+        <img src="images/advisors/farzana.jpg" alt="Dr. Farzana Islam" />
+        <h4>Dr. Farzana Islam</h4>
+        <p>Education Advisor<br>Professor at DU</p>
+      </div>
+      <div class="advisor-bio">
+        <p>Dr. Farzana is dedicated to improving education accessibility. She designs learning programs and mentors youth volunteers across the country.</p>
+      </div>
+    </div>
+        <div class="advisor-card">
+      <div class="advisor-header">
+        <img src="images/advisors/farzana.jpg" alt="Dr. Farzana Islam" />
+        <h4>Dr. Farzana Islam</h4>
+        <p>Education Advisor<br>Professor at DU</p>
+      </div>
+      <div class="advisor-bio">
+        <p>Dr. Farzana is dedicated to improving education accessibility. She designs learning programs and mentors youth volunteers across the country.</p>
+      </div>
+    </div>
+        <div class="advisor-card">
+      <div class="advisor-header">
+        <img src="images/advisors/farzana.jpg" alt="Dr. Farzana Islam" />
+        <h4>Dr. Farzana Islam</h4>
+        <p>Education Advisor<br>Professor at DU</p>
+      </div>
+      <div class="advisor-bio">
+        <p>Dr. Farzana is dedicated to improving education accessibility. She designs learning programs and mentors youth volunteers across the country.</p>
+      </div>
+    </div>
+        <div class="advisor-card">
+      <div class="advisor-header">
+        <img src="images/advisors/farzana.jpg" alt="Dr. Farzana Islam" />
+        <h4>Dr. Farzana Islam</h4>
+        <p>Education Advisor<br>Professor at DU</p>
+      </div>
+      <div class="advisor-bio">
+        <p>Dr. Farzana is dedicated to improving education accessibility. She designs learning programs and mentors youth volunteers across the country.</p>
+      </div>
+    </div>
+        <div class="advisor-card">
+      <div class="advisor-header">
+        <img src="images/advisors/farzana.jpg" alt="Dr. Farzana Islam" />
+        <h4>Dr. Farzana Islam</h4>
+        <p>Education Advisor<br>Professor at DU</p>
+      </div>
+      <div class="advisor-bio">
+        <p>Dr. Farzana is dedicated to improving education accessibility. She designs learning programs and mentors youth volunteers across the country.</p>
+      </div>
+    </div>
+        <div class="advisor-card">
+      <div class="advisor-header">
+        <img src="images/advisors/farzana.jpg" alt="Dr. Farzana Islam" />
+        <h4>Dr. Farzana Islam</h4>
+        <p>Education Advisor<br>Professor at DU</p>
+      </div>
+      <div class="advisor-bio">
+        <p>Dr. Farzana is dedicated to improving education accessibility. She designs learning programs and mentors youth volunteers across the country.</p>
+      </div>
+    </div>    <div class="advisor-card">
+      <div class="advisor-header">
+        <img src="images/advisors/farzana.jpg" alt="Dr. Farzana Islam" />
+        <h4>Dr. Farzana Islam</h4>
+        <p>Education Advisor<br>Professor at DU</p>
+      </div>
+      <div class="advisor-bio">
+        <p>Dr. Farzana is dedicated to improving education accessibility. She designs learning programs and mentors youth volunteers across the country.</p>
+      </div>
+    </div>    <div class="advisor-card">
+      <div class="advisor-header">
+        <img src="images/advisors/farzana.jpg" alt="Dr. Farzana Islam" />
+        <h4>Dr. Farzana Islam</h4>
+        <p>Education Advisor<br>Professor at DU</p>
+      </div>
+      <div class="advisor-bio">
+        <p>Dr. Farzana is dedicated to improving education accessibility. She designs learning programs and mentors youth volunteers across the country.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<script>
+  function toggleLanguage(lang) {
+    document.getElementById('rules-en').style.display = (lang === 'en') ? 'block' : 'none';
+    document.getElementById('rules-bn').style.display = (lang === 'bn') ? 'block' : 'none';
+  }
+</script>
+
+
+
+  <footer>
+    <p>&copy; 2025 Social Development Forum</p>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navbar = document.querySelector('.navbar');
+
+    menuToggle.addEventListener('click', () => {
+      navbar.classList.toggle('active');
+    });
+
+    menuToggle.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        navbar.classList.toggle('active');
+        e.preventDefault();
+      }
+    });
+  </script>
+
+  <script>
+  document.querySelectorAll('.advisor-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const card = header.parentElement;
+      card.classList.toggle('expanded');
+    });
+  });
+</script>
+  <script>
+  function toggleSidebar() {
+    const navbar = document.querySelector('.navbar');
+    navbar.classList.toggle('show');
+  }
+</script>
+</body>
+</html>

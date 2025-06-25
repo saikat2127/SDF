@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Donate | Social Development Forum</title>
+  <link rel="stylesheet" href="css/donate.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+ <header>
+  <div class="header-left">
+    <img src="images/logo.png" alt="SDF Logo" class="logo">
+    <span class="org-name">Social Development Forum</span>
+    <button class="menu-toggle" onclick="toggleSidebar()">
+      <i class="fas fa-ellipsis-v"></i>
+    </button>
+  </div>
+  <nav class="navbar">
+    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+    <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+    <a href="focus.html"><i class="fas fa-lightbulb"></i> What We Do</a>
+    <a href="donate.html"><i class="fas fa-hand-holding-heart"></i> Donate</a>
+    <a href="membership.html"><i class="fas fa-user-plus"></i> Membership</a>
+    <a href="donor.html"><i class="fas fa-heartbeat"></i> Be a Donor</a>
+    <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+  </nav>
+</header>
+
+<main class="donation-section">
+  <h2>Support Our Cause</h2>
+  <p>Make a difference by donating through one of the following methods:</p>
+
+  <div class="donation-methods">
+
+    <div class="donation-card" onclick="redirectToBkash()">
+      <i class="fab fa-cc-mastercard"></i>
+      <h3>bKash</h3>
+      <p><strong>Number:</strong> 01XXXXXXXXX</p>
+    </div>
+
+    <div class="donation-card" onclick="redirectToNagad()">
+      <i class="fas fa-money-bill-wave"></i>
+      <h3>Nagad</h3>
+      <p><strong>Number:</strong> 01XXXXXXXXX</p>
+    </div>
+
+    <div class="donation-card" onclick="scrollToContact()">
+      <i class="fas fa-university"></i>
+      <h3>Bank Transfer</h3>
+      <p>Contact us for account details</p>
+      <a href="#contact" class="donate-contact">Contact Now</a>
+    </div>
+
+  </div>
+
+  <p class="donation-footer">Every contribution helps change lives. Thank you!</p>
+</main>
+
+
+  <footer>
+    <p>&copy; 2025 Social Development Forum</p>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navbar = document.querySelector('.navbar');
+
+    menuToggle.addEventListener('click', () => {
+      navbar.classList.toggle('active');
+    });
+
+    menuToggle.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        navbar.classList.toggle('active');
+        e.preventDefault();
+      }
+    });
+  </script>
+
+  <script>
+  function redirectToBkash() {
+    // You can change this to an actual payment link or open a modal
+    window.location.href = "https://www.bkash.com"; // Or your payment page
+  }
+
+  function redirectToNagad() {
+    window.location.href = "https://www.nagad.com.bd"; // Or your payment page
+  }
+
+  function scrollToContact() {
+    const contactSection = document.querySelector('#contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      window.location.href = "contact.html"; // fallback if not on same page
+    }
+  }
+</script>
+  <script>
+  function toggleSidebar() {
+    const navbar = document.querySelector('.navbar');
+    navbar.classList.toggle('show');
+  }
+</script>
+</body>
+</html>

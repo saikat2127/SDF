@@ -1,0 +1,369 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Fixed Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #002e2e;
+  color: #fff;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* To prevent content hiding under fixed header */
+body {
+  padding-top: 70px;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Header left content */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+}
+
+.org-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #007bff;
+}
+
+/* Main content */
+.who-we-are {
+  max-width: 900px;
+  margin: 40px auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+  padding: 0 15px;
+}
+
+.who-we-are h2 {
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  color: #1a5276;
+  text-align: center;
+}
+
+/* Description and image side by side */
+.description-with-image {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.description-with-image img {
+  max-width: 300px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+
+.description-with-image p {
+  flex: 1;
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+/* Leadership messages container */
+.leadership-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.message {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.message img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+
+.message h3 {
+  font-size: 1.5rem;
+  color: #2874a6;
+  margin-bottom: 10px;
+}
+
+.message p {
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #34495e;
+  max-width: 700px;
+}
+
+/* Responsive adjustments */
+@media (min-width: 700px) {
+  .leadership-messages {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .message {
+    flex: 1;
+  }
+}
+@media (max-width: 600px) {
+  .description-with-image {
+    flex-direction: column;
+    text-align: center;
+  }
+  .description-with-image p {
+    max-width: 100%;
+  }
+  .message {
+    flex-direction: column;
+    text-align: center;
+  }
+  .message p {
+    max-width: 100%;
+  }
+}
+
+#sdf-rules {
+  background: linear-gradient(to right, #e8f0ff, #f3f7ff);
+  padding: 40px 20px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  max-width: 900px;
+  margin: 40px auto;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.language-toggle {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.lang-btn {
+  background-color: #2b4eff;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  margin-left: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.lang-btn:hover {
+  background-color: #1f36b7;
+}
+
+.rules-content h2 {
+  color: #1d1d5e;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.rules-content ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.rules-content li {
+  margin-bottom: 12px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+@media (max-width: 600px) {
+  .lang-btn {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+
+  .rules-content h2 {
+    font-size: 20px;
+  }
+
+  .rules-content li {
+    font-size: 15px;
+  }
+}
+
+
+.advisor-section {
+  padding: 40px 20px;
+  background: #f5faff;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.advisor-section h3 {
+  font-size: 28px;
+  color: #1e2a78;
+  margin-bottom: 30px;
+}
+
+.advisor-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.advisor-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 220px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.advisor-card:hover {
+  transform: translateY(-8px);
+}
+
+.advisor-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 3px solid #1e2a78;
+}
+
+.advisor-card h4 {
+  font-size: 18px;
+  color: #1e2a78;
+  margin: 10px 0 5px;
+}
+
+.advisor-card p {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.4;
+}
+.advisor-header {
+  cursor: pointer;
+}
+
+.advisor-bio {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+  font-size: 14px;
+  color: #555;
+  margin-top: 10px;
+}
+
+.advisor-card.expanded .advisor-bio {
+  max-height: 200px;
+  opacity: 1;
+}
+
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #222;
+  color: white;
+  margin-top: 50px;
+  font-size: 0.9rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  /* Navbar toggle for mobile */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 200px;
+    height: 100%;
+    background-color: #004466;
+    flex-direction: column;
+    padding-top: 60px;
+    gap: 20px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+  }
+
+  .navbar.show {
+    left: 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Hero section adjustments for mobile */
+  .hero {
+    padding: 15px;
+  }
+
+  .hero.social-work-hero {
+    padding: 15px;
+  }
+
+  .hero-description,
+  .hero.social-work-hero .hero-description {
+    margin: 10px auto;
+    text-align: center;
+  }
+
+  /* Navbar links vertical spacing */
+  .navbar a {
+    margin: 15px 0;
+    margin-left: 20px;
+    font-size: 15px;
+  }
+}

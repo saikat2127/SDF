@@ -1,0 +1,350 @@
+/* Reset and global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+body {
+  line-height: 1.6;
+  background: #f4f4f4;
+  color: #333;
+  padding-top: 80px;
+}
+
+/* Header styles */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: #002e2e;
+  color: #fff;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-left {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  height: 40px;
+  margin-right: 10px;
+}
+.org-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+.navbar {
+  display: flex;
+  gap: 15px;
+}
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px;
+  transition: background 0.3s;
+}
+.navbar a:hover {
+  background: #006666;
+  border-radius: 4px;
+}
+
+/* Mobile toggle button */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+}
+.menu-toggle div {
+  width: 25px;
+  height: 3px;
+  background: white;
+}
+
+/* Main content */
+main {
+  padding: 20px;
+}
+h2 {
+  margin-bottom: 10px;
+  color: #008080;
+}
+form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+form button {
+  background: #008080;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+form button:hover {
+  background: #006666;
+}
+.contact-info p {
+  margin: 8px 0;
+}
+.contact-info i {
+  margin-right: 6px;
+}
+
+
+/* General styling */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #e0f7fa, #e1bee7);
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #4a148c;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+form input,
+form textarea {
+  padding: 12px 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #7b1fa2;
+  outline: none;
+  box-shadow: 0 0 6px rgba(123, 31, 162, 0.4);
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+form button {
+  padding: 12px;
+  background-color: #7b1fa2;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #4a148c;
+}
+
+/* Contact info */
+.contact-info {
+  background: #f3e5f5;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info p {
+  font-size: 1rem;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info i {
+  color: #7b1fa2;
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.contact-info a {
+  color: #4a148c;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  main {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  form input,
+  form textarea {
+    font-size: 0.95rem;
+  }
+
+  .contact-info {
+    font-size: 0.95rem;
+  }
+}
+
+/* Contact Info Card Styling */
+.contact-info {
+  background: #f3e5f5;
+  padding: 25px 30px;
+  border-radius: 15px;
+  max-width: 700px;
+  margin: 40px auto;
+  box-shadow: 0 6px 20px rgba(123, 31, 162, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.contact-info:hover {
+  transform: translateY(-3px);
+}
+
+/* Paragraph and Icon Layout */
+.contact-info p {
+  display: flex;
+  align-items: center;
+  font-size: 1.05rem;
+  margin: 12px 0;
+  color: #4a148c;
+  font-weight: 500;
+}
+
+/* Font Awesome Icons */
+.contact-info i {
+  font-size: 1.2rem;
+  margin-right: 12px;
+  color: #7b1fa2;
+  width: 25px;
+  text-align: center;
+}
+
+/* Links inside contact info */
+.contact-info a {
+  color: #6a1b9a;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-info a:hover {
+  color: #4a148c;
+  text-decoration: underline;
+}
+
+/* Section background (optional) */
+section {
+  background: linear-gradient(to right, #ede7f6, #f3e5f5);
+  padding: 50px 15px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .contact-info {
+    padding: 20px;
+    margin: 20px auto;
+    font-size: 0.95rem;
+  }
+
+  .contact-info p {
+    font-size: 1rem;
+  }
+}
+
+
+
+
+
+
+/* Footer */
+footer {
+  text-align: center;
+  background: #008080;
+  color: #fff;
+  padding: 12px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  /* Navbar toggle for mobile */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 200px;
+    height: 100%;
+    background-color: #004466;
+    flex-direction: column;
+    padding-top: 60px;
+    gap: 20px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+  }
+
+  .navbar.show {
+    left: 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Hero section adjustments for mobile */
+  .hero {
+    padding: 15px;
+  }
+
+  .hero.social-work-hero {
+    padding: 15px;
+  }
+
+  .hero-description,
+  .hero.social-work-hero .hero-description {
+    margin: 10px auto;
+    text-align: center;
+  }
+
+  /* Navbar links vertical spacing */
+  .navbar a {
+    margin: 15px 0;
+    margin-left: 20px;
+    font-size: 15px;
+  }
+}

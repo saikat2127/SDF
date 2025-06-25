@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Membership | Social Development Forum</title>
+  <link rel="stylesheet" href="css/membership.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+ <header>
+  <div class="header-left">
+    <img src="images/logo.png" alt="SDF Logo" class="logo">
+    <span class="org-name">Social Development Forum</span>
+    <button class="menu-toggle" onclick="toggleSidebar()">
+      <i class="fas fa-ellipsis-v"></i>
+    </button>
+  </div>
+  <nav class="navbar">
+    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+    <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+    <a href="focus.html"><i class="fas fa-lightbulb"></i> What We Do</a>
+    <a href="donate.html"><i class="fas fa-hand-holding-heart"></i> Donate</a>
+    <a href="membership.html"><i class="fas fa-user-plus"></i> Membership</a>
+    <a href="donor.html"><i class="fas fa-heartbeat"></i> Be a Donor</a>
+    <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+  </nav>
+</header>
+
+  <section class="join-section">
+<div class="view-members-container">
+  <a href="members.html" class="view-members-btn">
+    <i class="fas fa-users"></i> View Our Members
+  </a>
+</div>
+
+</div>
+
+  <h2>Become a Member</h2>
+  <p>
+    Are you passionate about social service and community development? Join us as a member to be part of a movement that brings real change to society.
+  </p>
+
+  <h3>Requirements:</h3>
+  <ul>
+    <li>Must be 16 years or older</li>
+    <li>Submit a filled <strong>Membership Application Form (PDF)</strong></li>
+    <li>Copy of National ID or Student ID</li>
+    <li>1 Passport-sized photo</li>
+    <li>Valid email and phone number</li>
+    <li>Willingness to follow our <a href="#ethos-values">Ethos and Values</a></li>
+  </ul>
+</section>
+
+<hr />
+
+<section class="join-section">
+  <h2>Become a Volunteer</h2>
+  <p>
+    Volunteers are the heart of SDF. If you’re ready to serve with dedication, we welcome you to our volunteer team.
+  </p>
+
+  <h3>Requirements:</h3>
+  <ul>
+    <li>Must be at least 15 years old</li>
+    <li>Submit a filled <strong>Volunteer Application Form (PDF)</strong></li>
+    <li>Copy of National ID or Birth Certificate</li>
+    <li>1 Passport-sized photo</li>
+    <li>Brief statement of interest (Why do you want to volunteer?)</li>
+    <li>Commitment to uphold SDF's mission and values</li>
+  </ul>
+</section>
+
+
+<main>
+  <section id="ethos-values">
+    <h2>Ethos and Values</h2>
+    <p>At Social Development Forum, every member is expected to uphold the following values to ensure a united and impactful community:</p>
+
+    <ul>
+      <li><strong>Compassion &amp; Empathy:</strong> Understand and genuinely care for the needs and struggles of the communities we serve.</li>
+      <li><strong>Integrity &amp; Honesty:</strong> Act with transparency and be accountable in all our activities.</li>
+      <li><strong>Respect &amp; Inclusivity:</strong> Value diversity and treat everyone with dignity and fairness.</li>
+      <li><strong>Responsibility &amp; Commitment:</strong> Take ownership and consistently contribute to the club’s mission.</li>
+      <li><strong>Collaboration &amp; Teamwork:</strong> Work harmoniously with fellow members towards common goals.</li>
+      <li><strong>Continuous Learning &amp; Improvement:</strong> Be open to feedback and always strive to improve.</li>
+      <li><strong>Service Above Self:</strong> Prioritize the welfare of others with humility and selflessness.</li>
+      <li><strong>Transparency &amp; Communication:</strong> Maintain clear and respectful communication internally and externally.</li>
+    </ul>
+      <div class="membership-pdf">
+    <p>Download the full membership form here:</p>
+    <a href="files/membership.pdf" download target="_blank" class="btn-download">
+      <i class="fas fa-file-pdf"></i> Membership Form (PDF)
+    </a>
+  </div>
+  </section>
+
+
+</main>
+  
+<section id="membership-documents" class="documents-section">
+  <h2>Required Documents for Membership</h2>
+  <p>To become a member of Social Development Forum, please prepare and submit the following documents:</p>
+  <ul>
+    <li>Completed Membership Application Form (downloadable <a href="files/membership.pdf" target="_blank" download>here</a>)</li>
+    <li>Photocopy of National ID card or Birth Certificate</li>
+    <li>Passport-sized recent photograph (1 copy)</li>
+  </ul>
+  <p><b>Please bring these documents to our office or any of our representatives in your area or send scanned copies via email during your application process.</b></p>
+     <p><b>Email: bdsdfcommunity@gmail.com</b></p>
+</section>
+
+
+
+<section class="documents-section">
+  <h2>Documents Required to Become a Volunteer</h2>
+  <p><b>To join as a volunteer of the Social Development Forum (SDF), please prepare and submit the following documents:</b></p>
+  <ul>
+    <li>Recent Passport-size Photograph(2copies)</li>
+    <li>National ID (NID) (Photocopy or Scan)</li>
+    <li>Student ID (Photocopy or Scan)</li>
+    <li>Completed Volunteer Application Form (PDF below)</li>
+    <li>Proof of Address (e.g., utility bill or rent agreement)</li>
+    <li>Reference Letter (from a teacher, mentor, or community leader)</li>
+    <li>Statement of Purpose (brief paragraph on why you want to volunteer)</li>
+  </ul>
+  <p>
+    📄 <a href="files/volunteer.pdf" target="_blank">Download Volunteer Application Form (PDF)</a>
+  </p>
+  <p><b>Email: bdsdfcommunity@gmail.com</b></p>
+</section>
+
+
+
+
+  <footer>
+    <p>&copy; 2025 Social Development Forum</p>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navbar = document.querySelector('.navbar');
+
+    menuToggle.addEventListener('click', () => {
+      navbar.classList.toggle('active');
+    });
+
+    menuToggle.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        navbar.classList.toggle('active');
+        e.preventDefault();
+      }
+    });
+  </script>
+    <script>
+  function toggleSidebar() {
+    const navbar = document.querySelector('.navbar');
+    navbar.classList.toggle('show');
+  }
+</script>
+</body>
+</html>
